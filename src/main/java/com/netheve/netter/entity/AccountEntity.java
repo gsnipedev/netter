@@ -5,6 +5,8 @@ import com.netheve.netter.entity.enums.AccountRank;
 import com.netheve.netter.entity.enums.AccountRole;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -50,9 +52,11 @@ public class AccountEntity {
     @JsonIgnore
     private Long tokenExpiredAt;
 
+    @CreationTimestamp
     @Column(nullable = false)
     private LocalDateTime createdAt;
 
     @Column
+    @UpdateTimestamp
     private LocalDateTime updatedAt;
 }
