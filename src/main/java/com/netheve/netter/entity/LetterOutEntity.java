@@ -26,7 +26,7 @@ public class LetterOutEntity {
     private String letterNumber;
 
     @Column
-    private String forDate;
+    private LocalDateTime forDate;
 
     @Column
     private String letterType;
