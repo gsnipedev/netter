@@ -39,7 +39,7 @@ public class LetterInController {
         return ResponseEntity.ok(letterInService.showAll());
     }
 
-    @PostMapping("/in/upload")
+    @PostMapping
     private ResponseEntity<LetterInEntity> uploadLetterIn(
             @RequestParam("json") String json,
             @RequestParam("letter") MultipartFile letter){
